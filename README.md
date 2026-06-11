@@ -1,6 +1,6 @@
 # opencode-config
 
-Shared OpenCode configuration with OpenRouter integration, curated plugin stack, and caveman skill.
+Shared OpenCode configuration with OpenRouter integration, a curated plugin stack, and coding skills (TDD, debugging, code review, API design, frontend taste).
 
 ## Requirements
 
@@ -16,7 +16,7 @@ else installs the same on both.
 ## Installation
 
 ```bash
-git clone https://github.com/YOUR-ORG/opencode-config.git
+git clone https://github.com/lord-helicon/opencode-config.git
 cd opencode-config
 chmod +x install.sh
 ./install.sh
@@ -98,14 +98,17 @@ Switch model in the TUI: `Ctrl+M`
 
 ```
 opencode-config/
-  opencode.json       <- Main configuration
-  install.sh          <- Setup script
-  skills/
-    caveman/
+  opencode.json       <- Main configuration (providers, models, plugins, permissions)
+  install.sh          <- Setup script (idempotent, backs up existing config)
+  skills/             <- One folder per skill, each with a SKILL.md
+    <skill-name>/
       SKILL.md
-  commands/
-    caveman.md
+  commands/           <- One .md per slash-command
+    <command>.md
 ```
+
+Adding a skill = drop a new folder under `skills/`; adding a slash-command = drop a
+new `.md` under `commands/`. No registration step — `install.sh` copies the whole tree.
 
 ## Update config
 
