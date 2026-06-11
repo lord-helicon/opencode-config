@@ -1,0 +1,14 @@
+# Never commit API keys
+auth.json
+*.key
+.env
+.env.*
+
+# macOS
+.DS_Store
+
+# Install script backups
+*.bak.*
+
+# Claude Code
+CLAUDE.md
